@@ -38,7 +38,7 @@
       - pkg-config
       - python3-pip
       - python3-venv
-      - systemd 
+      - systemd
       - systemd-cron
       - wget
     state: present
@@ -47,21 +47,21 @@
 
 - name: Install rabbitmq dependencies
   when: janus_build_extras['rabbitmq']
-  fail: 
+  fail:
     msg: RabbitMQ for Janus event/API is not yet supported by this role. Please open a pull request with build play for https://github.com/alanxz/rabbitmq-c
   tags:
     janus-gateway
 
 - name: Install mqtt dependencies
   when: janus_build_extras['mqtt']
-  fail: 
+  fail:
     msg: MQTT for Janus events/API is not yet supported by this role. Please open a pull request with build play for https://eclipse.org/paho/clients/c
   tags:
     janus-gateway
 
 - name: Install Nanomsg dependencies
   when: janus_build_extras['nanomsg']
-  fail: 
+  fail:
     msg: nanomsg for Janus API is not yet supported by this role. Please open a pull request with build play for https://eclipse.org/paho/clients/c
   tags:
     janus-gateway

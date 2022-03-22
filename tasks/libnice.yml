@@ -4,7 +4,7 @@
 - name: Install meson and ninja build systems
   ansible.builtin.pip:
     name:
-      - meson 
+      - meson
     virtualenv: "{{ janus_workspace_dir }}/venv"
     virtualenv_command: /usr/bin/python3.7 -m venv
 

@@ -5,7 +5,7 @@
 # is_private = true|false (whether this room should be in the public list, default=true)
 # secret = <optional password needed for manipulating (e.g. destroying) the room>
 # pin = <optional password needed for joining the room>
-# require_pvtid = true|false (whether subscriptions are required to provide a valid private_id 
+# require_pvtid = true|false (whether subscriptions are required to provide a valid private_id
 #			to associate with a publisher, default=false)
 # publishers = <max number of concurrent senders> (e.g., 6 for a video
 #              conference or 1 for a webinar)
