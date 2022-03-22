@@ -10,7 +10,7 @@
     state: directory
     mode: "770"
     recurse: true
-    
+
 - name: Install libnice
   import_tasks: libnice.yml
   tags:
@@ -55,7 +55,7 @@
       {{ janus_build_extras.systemd | ternary('--enable-systemd-sockets', '') }} \
       {{ janus_build_extras.recordplay | ternary('', '--disable-plugin-recordplay') }} \
       {{ janus_build_extras.sip | ternary('', '--disable-plugin-sip') }}"
-      
+
     chdir: "{{ janus_build_dir }}"
   when: janus_upgrade_available
 
@@ -75,7 +75,7 @@
 
 - name: Set installed version facts
   ansible.builtin.set_fact:
-    janus_installed_versions:  
+    janus_installed_versions:
       janus: "{{ janus_version }}"
       libnice: "{{ janus_libnice_version }}"
       usrsctp: "{{ janus_usrsctp_version }}"

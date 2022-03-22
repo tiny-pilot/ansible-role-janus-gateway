@@ -28,7 +28,7 @@ general: {
 		# This is what you configure if you want to launch Janus as a daemon
 	#daemonize = true						# Whether Janus should run as a daemon
 											# or not (default=run in foreground)
-	pid_file = "{{ janus_pid_file }}"		
+	pid_file = "{{ janus_pid_file }}"
     # PID file to create when Janus has been
 	# started, and to destroy at shutdown
 
@@ -41,18 +41,18 @@ general: {
 									# where you do the things your way) and you
 									# don't want other application to mess with
 									# this Janus instance.
-	token_auth = "{{ janus_conf_var['janus']['token_auth'] }}"				
+	token_auth = "{{ janus_conf_var['janus']['token_auth'] }}"
                                     # Enable a token based authentication
 									# mechanism to force users to always provide
 									# a valid token in all requests. Useful if
 									# you want to authenticate requests from web
 									# users.
-	token_auth_secret = "{{ janus_conf_var['janus']['token_auth_secret'] }}"		
+	token_auth_secret = "{{ janus_conf_var['janus']['token_auth_secret'] }}"
                                     # Use HMAC-SHA1 signed tokens (with token_auth). Note that
 									# without this, the Admin API MUST
 									# be enabled, as tokens are added and removed
 									# through messages sent there.
-	admin_secret = "{{ janus_conf_var['janus']['admin_secret'] }}"	
+	admin_secret = "{{ janus_conf_var['janus']['admin_secret'] }}"
                                     # String that all Janus requests must contain
 									# to be accepted/authorized by the admin/monitor.
 									# only needed if you enabled the admin API
@@ -72,7 +72,7 @@ general: {
 									# risk having orphaned sessions (sessions not
 									# controlled by any transport and never freed).
 									# To avoid timeouts, keep-alives can be used.
-	candidates_timeout = {{ janus_conf_var['janus']['candidates_timeout'] }}	
+	candidates_timeout = {{ janus_conf_var['janus']['candidates_timeout'] }}
                             		# How long (in seconds) we should keep hold of
 									# pending (trickle) candidates before discarding
 									# them (default=45s). Notice that setting this
