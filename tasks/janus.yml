@@ -73,6 +73,13 @@
     chdir: "{{ janus_build_dir }}"
   when: janus_upgrade_available
 
+# Allow Janus C header files to be included when compiling third-party plugins.
+- name: Symlink Janus C header files to the C include path
+  file:
+    src: "{{ janus_install_dir }}/include/janus"
+    dest: /usr/local/include/janus
+    state: link
+
 - name: Set installed version facts
   ansible.builtin.set_fact:
     janus_installed_versions:
