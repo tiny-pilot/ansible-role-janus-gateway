@@ -8,6 +8,7 @@
   ansible.builtin.file:
     path: "{{ janus_workspace_dir }}"
     state: directory
+    mode: "770"
     recurse: true
 
 - name: Install libnice
