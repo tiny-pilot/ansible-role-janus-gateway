@@ -9,7 +9,6 @@
     path: "{{ janus_workspace_dir }}"
     state: directory
     mode: "770"
-    recurse: true
 
 - name: Install libnice
   import_tasks: libnice.yml
