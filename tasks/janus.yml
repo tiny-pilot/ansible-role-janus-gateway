@@ -75,6 +75,7 @@
 
 # Allow Janus C header files to be included when compiling third-party plugins.
 - name: Symlink Janus C header files to the C include path
+  become: true
   file:
     src: "{{ janus_install_dir }}/include/janus"
     dest: /usr/local/include/janus
