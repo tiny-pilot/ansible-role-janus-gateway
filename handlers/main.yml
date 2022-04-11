@@ -3,8 +3,9 @@
 
 - name: reindex shared libraries
   become: true
-  ansible.builtin.command:
-    cmd: ldconfig
+  # Deliberately don't use the FQDN ansible.builtin.command because it doesn't
+  # work with Ansible 2.x: https://github.com/ansible/ansible/issues/71817
+  command: ldconfig
 
 - name: restart janus service
   become: true
