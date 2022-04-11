@@ -3,7 +3,8 @@
 
 - name: reindex shared libraries
   become: true
-  ansible.builtin.command: ldcofig
+  ansible.builtin.command:
+    cmd: ldcofig
 
 - name: restart janus service
   become: true
