@@ -38,3 +38,5 @@
   when: janus_upgrade_available
   environment:
     PATH: "{{ janus_workspace_dir }}/venv/bin:{{ ansible_env.PATH }}"
+  notify:
+    - reindex shared libraries

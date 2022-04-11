@@ -32,3 +32,5 @@
     cmd: make install
     chdir: "{{ janus_libsrtp_build_dir }}"
   when: janus_upgrade_available
+  notify:
+    - reindex shared libraries
