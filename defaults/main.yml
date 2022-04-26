@@ -52,6 +52,9 @@ janus_api_secret: null
 janus_token_auth_secret: null
 janus_admin_secret: null
 
+janus_ws_ip: '0.0.0.0'
+janus_ws_port: 8188
+
 janus_conf_var:
   janus:
     plugins_folder: "{{ janus_install_dir }}/lib/janus/plugins"
