@@ -83,6 +83,9 @@ janus_conf_var:
     https_port: 8089
     http: true
     http_port: 8088
+  janus.transport.websockets:
+    ws_ip: '0.0.0.0'
+    ws_port: 8188
 
 janus_conf_template:
   janus.eventhandler.gelfevh.jcfg: janus.eventhandler.gelfevh.jcfg
